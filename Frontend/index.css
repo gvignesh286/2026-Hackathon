@@ -1,0 +1,13 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f2b4d;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
