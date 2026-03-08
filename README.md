@@ -3,14 +3,11 @@
 A conversational chat application for exploring U.S. federal regulations. Ask natural language questions and get answers backed by live data from [Regulations.gov](https://www.regulations.gov).
 
 ##Hackathon Reflection
-#CrimsonCode 2026 Hackathon Reflection
-We participated at Washington State University for the CrimsonCode 2026 Hackathon. This year, we wanted to help U.S. federal regulations be more accessible to everyday people. So we built an AI assistant that answers users' questions about those federal regulations using data from live Regulations.gov (federal regulation database) APIs.
-#Technical Choices
-We chose Node.js and Express as our backend and created the frontend using React + Vite to develop our application quickly. Instead of preloading all of the regulations information, we set up our backend to proxy user requests for real-time data through the Regulations.gov API. We integrated Google Gemini on our AI layer to manage natural language understanding and direct queries to the appropriate API endpoint, eliminating the need for us to build our own intent-classification systems. We made sure that any rate limiting error encountered by users would be displayed clearly, rather than failing to notify users of the issue.
-#Contributions
-We created this project as a team of three people; my work focused on front-end development, which included developing the component hierarchy, design token system, and UI for rendering rich results from documents, dockets, or comment data. I also was responsible for managing conversational state to ensure that the previous question/answer pair would be preserved when the user asked additional questions.
-#Quality Assessment:
- I’m pleased with the outcome of the application: it worked from one end to the other, had a good user interface, and effectively routed AI-generated requests. If I could go back, I would make the following changes: I would have spent more time on stress testing AI request routing with edge cases and less time on early design, as well as enforcing stricter time boxes around frontend deliverables so I could allocate some of that available bandwidth towards back-end stability.
+CrimsonCode 2026 Hackathon Reflection
+- We participated at Washington State University for the CrimsonCode 2026 Hackathon. This year, we wanted to help U.S. federal regulations be more accessible to everyday people. So we built an AI assistant that answers users' questions about those federal regulations using data from live Regulations.gov (federal regulation database) APIs.
+- Technical Choices: We chose Node.js and Express as our backend and created the frontend using React + Vite to develop our application quickly. Instead of preloading all of the regulations information, we set up our backend to proxy user requests for real-time data through the Regulations.gov API. We integrated Google Gemini on our AI layer to manage natural language understanding and direct queries to the appropriate API endpoint, eliminating the need for us to build our own intent-classification systems. We made sure that any rate limiting error encountered by users would be displayed clearly, rather than failing to notify users of the issue.
+- Contributions:We created this project as a team of three people; my work focused on front-end development, which included developing the component hierarchy, design token system, and UI for rendering rich results from documents, dockets, or comment data. I also was responsible for managing conversational state to ensure that the previous question/answer pair would be preserved when the user asked additional questions.
+- Quality Assessment: I’m pleased with the outcome of the application: it worked from one end to the other, had a good user interface, and effectively routed AI-generated requests. If I could go back, I would make the following changes: I would have spent more time on stress testing AI request routing with edge cases and less time on early design, as well as enforcing stricter time boxes around frontend deliverables so I could allocate some of that available bandwidth towards back-end stability.
 ![IMG_1366](https://github.com/user-attachments/assets/174dc42e-ec94-4464-902d-21a585bdc34f)
 
 ## Features
@@ -161,4 +158,5 @@ The app surfaces rate limit errors clearly so you know when to pause.
 - The `REGULATIONS_GOV_API_KEY` is **never** sent to the browser — all Regulations.gov requests are proxied through the backend
 - The `ANTHROPIC_API_KEY` is backend-only
 - Never commit `.env` files or hardcode keys
+
 
